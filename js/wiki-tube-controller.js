@@ -1,7 +1,8 @@
 'use strict'
 
-console.log('%ccontroller', 'background:black; color:white');
+let lastSearch = 'Eddie Vedder';
 
+console.log('%ccontroller', 'background:black; color:white');
 
 function onInit() {
     onRenderCards('eddie vedder')
@@ -24,6 +25,9 @@ function onSearch(ev) {
     var searchInput = elInput.value;
     elInput.value = ''
     if (!searchInput || searchInput === ' ') return
+
+    lastSearch = searchInput;
+    renderLastSearch()
 
     getdWikiInfo(searchInput)
         .then(renderInfo)
@@ -67,6 +71,12 @@ function renderInfo(infos) {
     document.querySelector('.wikipedia-container').innerHTML += strHTML.join('');
 }
 
+function renderLastSearch() {
+    const strHTML =
+        `, ${lastSearch}`
+    document.querySelector('.last-search').innerHTML += strHTML;
+}
+
 function onChangeTheme() {
     document.querySelector('.modal').style.visibility = 'visible';
 }
@@ -78,4 +88,10 @@ function onChangeColor(color) {
 
 function closeModal() {
     document.querySelector('.modal').style.visibility = 'hidden';
+}
+
+function clearHistory() {
+    lastSearch = ''
+    document.querySelector('.last-search').innerHTML = lastSearch;
+    onInit()
 }

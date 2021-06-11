@@ -4,14 +4,18 @@
 }
 
 body {
-  background-color: #e4e4e4;
+  background-color: white;
   margin: 0;
 }
 
 header {
+  position: -webkit-sticky;
+  position: sticky;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  top: 0;
   background-color: white;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -209,5 +213,25 @@ header .search-container button {
 
 .main-container .wikipedia-container .wiki-info a {
   color: #007599;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  bottom: 0;
+  background-color: #e2e2e2;
+  padding: 10px;
+}
+
+footer h3 {
+  display: inline;
+  margin-right: 20px;
+  font-weight: 600;
+}
+
+footer .last-search {
+  margin: 5px;
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=main.css.map */

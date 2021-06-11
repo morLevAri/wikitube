@@ -15,3 +15,4 @@ function getdWikiInfo(searchInput) {
     return axios.get(`https://en.wikipedia.org/w/api.php?&origin=*&action=query&list=search&srsearch=${searchInput}&format=json`)
         .then(res => res.data.query.search.splice(0, 5))
 }
+
