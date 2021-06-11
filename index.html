@@ -16,10 +16,11 @@
 <body onload="onInit()">
     <header class="header">
         <img class="logo" src="assets/imgs/logo.png" alt="">
+        <input type="color" onchange="onChangeColor(this.value)" />
         <form class="search-container" onsubmit="onSearch(event)" autocomplete="off">
             <label for=" search-input">
                 <input type="text" oninput="(event)" class="search-input" name="search-input" id="" placeholder="Search"
-                    onfocus="this.value=''" value="eddie vedder">
+                    onfocus="this.value=''" value="Eddie Vedder">
                 <button name="search-input">Search</button>
             </label>
         </form>

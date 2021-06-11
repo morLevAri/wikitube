@@ -65,3 +65,7 @@ function renderInfo(infos) {
     )
     document.querySelector('.wikipedia-container').innerHTML += strHTML.join('');
 }
+
+function onChangeColor(color) {
+    document.body.style.backgroundColor = color;
+}
