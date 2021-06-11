@@ -10,13 +10,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e2e09dddc5.js" crossorigin="anonymous"></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 
 </head>
 
 <body onload="onInit()">
     <header class="header">
         <img class="logo" src="assets/imgs/logo.png" alt="">
-        <input type="color" onchange="onChangeColor(this.value)" />
+        <section class="change-color-btn">
+            <button class="color-btn" onclick="onChangeTheme()">Change Theme</button>
+            <div class="modal">
+                <span class="close" onclick="closeModal()"> <i class="fas fa-times"></i></span>
+                <h3>Choose a new background color</h3>
+                <input class="change-color-input" type="color" value="#000" onchange="onChangeColor(this.value)" />
+            </div>
+        </section>
         <form class="search-container" onsubmit="onSearch(event)" autocomplete="off">
             <label for=" search-input">
                 <input type="text" oninput="(event)" class="search-input" name="search-input" id="" placeholder="Search"
@@ -47,6 +55,7 @@
         <section class="wikipedia-container"></section>
 
     </main>
+
 
     <script src="lib/axios.js"></script>
     <script src="config.js"></script>

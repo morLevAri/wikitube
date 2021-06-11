@@ -2,6 +2,7 @@
 
 console.log('%ccontroller', 'background:black; color:white');
 
+
 function onInit() {
     onRenderCards('eddie vedder')
     onRenderInfo('eddie vedder')
@@ -66,6 +67,15 @@ function renderInfo(infos) {
     document.querySelector('.wikipedia-container').innerHTML += strHTML.join('');
 }
 
+function onChangeTheme() {
+    document.querySelector('.modal').style.visibility = 'visible';
+}
+
 function onChangeColor(color) {
     document.body.style.backgroundColor = color;
+    closeModal()
+}
+
+function closeModal() {
+    document.querySelector('.modal').style.visibility = 'hidden';
 }

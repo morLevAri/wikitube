@@ -32,6 +32,61 @@ header {
         }
     }
 
+    .change-color-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+        }
+
+        .modal {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px 20px;
+            width: 300px;
+            top: 100px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid grey;
+            position: relative;
+            visibility: hidden;
+
+            span {
+                cursor: pointer;
+
+                :hover {
+                    color: rgb(124, 124, 124);
+                }
+            }
+
+            h3 {
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            input[type=color] {
+                width: 150px;
+                height: 30px;
+                border: none;
+                background: none;
+                margin: 0 auto;
+            }
+
+            input[type="color"]::-webkit-color-swatch-wrapper {
+                padding: 0;
+            }
+
+            input[type="color"]::-webkit-color-swatch {
+                border: solid 1px #000;
+                border-radius: 10px;
+            }
+        }
+    }
+
     .search-container {
         display: flex;
         justify-content: space-between;

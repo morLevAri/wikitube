@@ -38,6 +38,76 @@ header h1 span {
   font-size: 32px;
 }
 
+header .change-color-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .change-color-btn button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .change-color-btn .modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 20px 20px;
+  width: 300px;
+  top: 100px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid grey;
+  position: relative;
+  visibility: hidden;
+}
+
+header .change-color-btn .modal span {
+  cursor: pointer;
+}
+
+header .change-color-btn .modal span :hover {
+  color: #7c7c7c;
+}
+
+header .change-color-btn .modal h3 {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .change-color-btn .modal input[type=color] {
+  width: 150px;
+  height: 30px;
+  border: none;
+  background: none;
+  margin: 0 auto;
+}
+
+header .change-color-btn .modal input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+header .change-color-btn .modal input[type="color"]::-webkit-color-swatch {
+  border: solid 1px #000;
+  border-radius: 10px;
+}
+
 header .search-container {
   display: -webkit-box;
   display: -ms-flexbox;
