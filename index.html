@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wikitube</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e2e09dddc5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="onInit()">
+    <header class="header">
+        <img class="logo" src="assets/imgs/logo.png" alt="">
+        <form class="search-container" onsubmit="onSearch(event)" autocomplete="off">
+            <label for=" search-input">
+                <input type="text" oninput="(event)" class="search-input" name="search-input" id="" placeholder="Search"
+                    onfocus="this.value=''" value="eddie vedder">
+                <button name="search-input">Search</button>
+            </label>
+        </form>
+    </header>
+
+    <main class="main-container">
+
+        <section class="videos-list-container">
+            <ul class="videos-list">
+                <li class="topic">
+                    <img src="https://i.ytimg.com/vi/WIajEyhwUdE/default.jpg" alt="">
+                    <p>Eddie Vedder - Guaranteed (Into The Wild)</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="video-container">
+            <iframe class="video-player" width="560" height="315" src="https://www.youtube.com/embed/WIajEyhwUdE"
+                title="YouTube video player" frameborder="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </section>
+
+        <section class="wikipedia-container"></section>
+
+    </main>
+
+    <script src="lib/axios.js"></script>
+    <script src="config.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/swal.js"></script>
+    <script type='text/javascript' src='config.js'></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/wiki-tube-service.js"></script>
+    <script src="js/wiki-tube-controller.js"></script>
+</body>
+
+</html>
