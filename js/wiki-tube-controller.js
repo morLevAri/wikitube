@@ -90,8 +90,6 @@ function closeModal() {
     document.querySelector('.modal').style.visibility = 'hidden';
 }
 
-function clearHistory() {
-    lastSearch = ''
-    document.querySelector('.last-search').innerHTML = lastSearch;
-    onInit()
+function onClearHistory() {
+    clearHistory()
 }
