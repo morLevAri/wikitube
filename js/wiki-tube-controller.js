@@ -14,9 +14,13 @@ function onRenderCards(searchInput) {
         .then(renderCards)
 }
 
-function onRenderInfo(searchInput) {
-    getdWikiInfo(searchInput)
-        .then(renderInfo)
+async function onRenderInfo(searchInput) {
+    try {
+        await getdWikiInfo(searchInput)
+            .then(renderInfo)
+    } catch (err) {
+        console.log('Error is:', err);
+    }
 }
 
 function onSearch(ev) {
